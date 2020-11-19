@@ -1,0 +1,42 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>서비스 이용약관 (ToS)</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="/policy/css/popup.css">
+	<link rel="stylesheet" type="text/css" href="/policy/css/popup_inf.css">
+    <link rel="stylesheet" type="text/css" href="/policy/css/policy_style.css">
+	<script>
+    function getParam(key) {
+        var _parammap = {};
+        document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {                    
+            function decode(s) {
+                return decodeURIComponent(s.split("+").join(" "));
+            }
+            _parammap[decode(arguments[1])] = decode(arguments[2]);
+        });
+ 
+        return _parammap[key];
+    }
+</script>
+    <script type="text/javascript">
+        if (getParam("version") == '' || getParam("version") == null) {
+            location.replace('/policy/tos?version=201119');
+        }
+    </script>
+</head>
+<body style="">
+    <!-- popwrap -->
+        <h1>서비스 이용약관 (ToS)</h1>
+        <!-- popcont -->
+        <div style="margin: 20px;" role="div" data-include="/policy/tos/version.html"></div>
+	<script>document.write('<div class="popcont law" role="div" data-include="/policy/tos/'+ getParam("version") +'.html"></div>');</script>
+        <!-- //popcont -->
+    </div>
+    <!-- //popwrap -->
+	    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+	    <script> $(function(){ includeLayout(); }); function includeLayout(){ var includeArea = $('[data-include]'); var self, url; $.each(includeArea, function() { self = $(this); url = self.data("include"); self.load(url, function() { self.removeAttr("data-include"); }); }); } </script>
+        <script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
