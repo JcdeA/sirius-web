@@ -2,7 +2,7 @@ const express = require('express')
 
 const app = express()
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 9000
 
 app.use(express.json())
 app.use(express.static('public'))
@@ -54,8 +54,8 @@ app.get('/index', (req, res) => {
 })
 
 app.get('/support', (req, res) => {
-    res.render('commingsoon')
-    // res.redirect('https://discord.io/kaibot')
+    // res.render('commingsoon')
+    res.redirect('https://discord.io/teamsirius')
 })
 
 app.listen(port, () => console.log(`Listening on ${port}!`))
