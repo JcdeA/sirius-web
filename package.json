@@ -1,7 +1,7 @@
 {
-  "name": "mobster",
+  "name": "sirius-web",
   "version": "1.0.0",
-  "description": "",
+  "description": "Team Sirius",
   "main": "index.js",
   "scripts": {
     "test": "node .",
